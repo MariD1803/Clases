@@ -1,0 +1,184 @@
+* {
+    background-color: #131415;
+    display: grid;
+    font-weight: bold;
+    font-size: xx-large;
+}
+
+body {
+    grid-template-areas: 
+    'nav header header header'
+    'nav card card aside'
+    'nav documentation documentation aside'
+    'nav footer footer footer'; 
+    grid-template-columns: 200px auto auto 150px;
+    padding: 0 10%; 
+    margin: 40px 0;
+}
+
+.radius {    
+    border-radius: 15px;
+    text-align: center;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 20px;
+    
+}
+
+#header {
+    grid-area: header;
+    background-color: #606c38;
+    height: 150px; 
+    margin-bottom: 20px;
+}
+
+#nav {
+    grid-area: nav;
+    background-color: #fefae0;
+    height: auto;
+    margin-right: 20px;
+}
+
+#card {
+    grid-area: card;
+    background-color: #dda15e ;
+    height: 200px;
+    margin-bottom: 10px;
+}
+
+#documentation {
+    background-color: #bc6c25;
+    grid-area: documentation;
+    height: 200px;
+    margin-bottom: 20px;
+}
+
+#aside {
+    grid-area: aside;
+    background-color: #fefae0;
+    height: auto;
+    margin-left: 20px;    
+    margin-bottom: 20px;
+}
+
+#footer {
+    grid-area: footer;
+    background-color: #606c38;
+    height: 100px;
+}
+
+@media (max-width: 750px) {
+    * {
+        font-size: large;
+    }
+
+    body {
+        grid-template-columns: 150px auto auto 100px;
+        margin-top: 50px;
+    }
+
+    #header {
+        height: 100px; 
+        margin-bottom: 10px;
+    }
+    
+    #nav {
+        margin-right: 10px;
+    }
+    
+    #card {
+        height: 150px;
+        margin-bottom: 5px;
+    }
+    
+    #documentation {
+        height: 150px;
+        margin-bottom: 10px;
+    }
+    
+    #aside {
+        margin-left: 10px;    
+        margin-bottom: 10px;
+    }
+    
+    #footer {
+        height: 100px;
+    }
+
+
+}
+
+
+@media (max-width: 550px) {
+    body {
+        grid-template-columns: 100px auto auto 80px;
+        margin-top: 50px;
+    }
+
+    .radius {  
+        padding: 10%;
+    }
+
+    #header {
+        height: 80px; 
+        margin-bottom: 10px;
+    }
+    
+    #nav {
+        margin-right: 10px;
+    }
+    
+    #card {
+        height: 120px;
+        margin-bottom: 5px;
+    }
+    
+    #documentation {
+        height: 120px;
+        margin-bottom: 10px;
+    }
+    
+    #aside {
+        margin-left: 10px;    
+        margin-bottom: 10px;
+    }
+    
+    #footer {
+        height: 80px;
+    }
+
+
+}
+
+
+@media (max-width: 390px) {
+
+    * {
+        font-size: small;
+    }
+
+    body {
+        grid-template-columns: 100px auto auto 80px;
+        padding: 0 5%; 
+    }
+
+    #header {
+        height: 60px; 
+    }
+        
+    #card {
+        height: 100px;
+    }
+    
+    #documentation {
+        height: 100px;
+    }
+    
+    
+    #footer {
+        height: 60px;
+    }
+
+
+}
